@@ -883,7 +883,6 @@ var datatable = /** @class */ (function () {
                         _this = this;
                         $('#' + _this.div_id).css({ 'position': 'relative' });
                         if (_this.loadingImg) {
-                            loadhtml = '<div class="table-loading"><img src="/../newstatic/images/loading.gif"></img></div>';
                             $('#' + _this.div_id).append(loadhtml);
                         }
                         ;

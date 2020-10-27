@@ -261,7 +261,7 @@ function drawchart(datas) {
         { name: "LPR_5Y利率(%)", key: "LPR5Y", color: "#5550c8", data: [] },
         { name: "短期贷款利率:6个月至1年(含)(%)", key: "RATE_1", color: "#f59b32", data: [] },
         { name: "中长期贷款利率:5年以上(%)", key: "RATE_2", color: "#fa5078", data: [] }];
-    var sv = 0, nowdate = window.moment().subtract({ y: 2 }).format("YYYY-MM-DD");
+    var sv = 0, nowdate = window.moment().subtract({ y: 1 }).format("YYYY-MM-DD");
     for (var i = datas.length - 1; i >= 0; i--) {
         var item = datas[i];
         if (item["TRADE_DATE"] < nowdate)
@@ -883,7 +883,6 @@ var datatable = /** @class */ (function () {
                         _this = this;
                         $('#' + _this.div_id).css({ 'position': 'relative' });
                         if (_this.loadingImg) {
-                            loadhtml = '<div class="table-loading"><img src="/../newstatic/images/loading.gif"></img></div>';
                             $('#' + _this.div_id).append(loadhtml);
                         }
                         ;
