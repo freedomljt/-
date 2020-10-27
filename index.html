@@ -1,160 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="./cm-basic.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts-en.min.js"></script>
 
-  </head>
-  <body>
-    <div class="PO">
-        <div id="lpr-chrt" style="height:300px;"></div>
-        <!-- <div id="lpr-chrt-date" style="position:absolute; top:25px; right:22px; font-size: 12px;"><span id="lpr-chart-cn-date"></span></div> -->
-    </div>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <!-- <script src="./cm-basic.js"></script> -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts-en.min.js"></script> -->
+  <style>
+    #iframe {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
 
-    <script type="text/javascript">
-      const axios = require('axios');
+<body>
+  <iframe src="https://data.eastmoney.com/cjsj/globalRateLPR.html" id="iframe"></iframe>
+  <script type="text/javascript">
+    $(function() {
+      $('#iframe').load(function() {
+        $('#iframe').contents().find('#intellcont').hide();
+        $('#iframe').contents().find('.left-content').hide();
+      })
+    })
+  </script>
+</body>
 
-    $(function(){
-        var BK_URL = 'https://www.chinamoney.com.cn/ags/ms/'
-
-        $.ajax({
-          proxy: {
-            host: 'https://www.chinamoney.com.cn',
-          },
-            url:BK_URL+'cm-u-bk-currency/LprChrtCSV?startDate=2019-01-01',
-            type:'post',
-            cache: false,
-        }).done(function(data){
-
-            //日期
-            $.ajax({
-                type : "POST",
-                url:BK_URL+'cm-u-bk-currency/LprChrtS?startDate=2019-01-01',
-                dataType:'json'
-            }).done(function(data){
-                $('#lpr-chart-cn-date').text(data.data.showDate);
-            });
-
-            var dataString = new String(data.data.csv);
-            var dataArr = dataString.split("\r\n");
-            //split分割，前后容易出现空字符串
-            if(!dataArr[0]){
-                dataArr.splice(0,1);
-            }
-            if(!dataArr[dataArr.length-1]){
-                dataArr.splice(dataArr.length-1,1);
-            }
-
-            var columns = data.data.columns,
-                codes = data.data.graphs;
-
-            var chartData=[],xArr=[],legendArr=[];
-            //图例从data.data.graphs获取
-            $.each(codes,function(n,v){
-                legendArr.push(v.gid);
-                chartData.push([]);
-            })
-
-            $.each(dataArr,function(n,v){
-                if(v){
-                    var vArr = v.split(',');
-
-                    xArr.unshift(dateConvertor(vArr[0],'YYYY-MM-DD','-','YYYY-MM'));
-                    $.each(codes,function(m,w){
-                        chartData[m].unshift(vArr[6+m])
-                    })
-                }
-            })
-
-            $('#lpr-chrt').sanCharts({
-                tooltip:{
-                    formatter:function(param){
-                        return formatTooltip(param,2);
-                    }
-                },
-                legend:{
-                    show:true,
-                    data:legendArr,
-                    itemHeight:10,
-                    itemWidth:20
-                },
-                grid:{
-                    top:'8%',
-                    bottom:'15%'
-                },
-                graphic:[
-                    {
-                        right:'20%',
-                        bottom:'30%',
-                    }
-                ],
-                xAxis: {
-                    data: xArr,
-                    axisLabel:{
-                        show:true,
-                        interval:100000
-                    }
-                },
-                yAxis: {
-                    name:'%',
-                    axisLabel:{
-                        formatter:function(value,index){
-                            return value.toFixed(2);
-                        }
-                    },
-                },
-                //滚动条及区域平移
-                dataZoom: [
-                    {
-                        type: 'inside',
-                        start:0,
-                        end:100,
-                        moveOnMouseMove:false
-                    },
-                    {
-                        type: 'slider',
-                        show: true,
-                        start:0,
-                        end:100,
-                        handleIcon: 'M10.7,11.9H9.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4h1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-                        handleSize: '50%',
-                        height:30,
-                        bottom:10,
-                        labelFormatter:function(value){
-                            return ''
-                        }
-                    }
-                ],
-                series:createSeries(chartData,legendArr)
-            })
-
-        })
-
-
-        function createSeries(data,legend){
-            var seriesArr = [];
-            $.each(legend,function(n,v){
-                var obj = {
-                    type: 'line',
-                    name:v,
-                    data: data[n],
-                    showSymbol:true,
-                    symbol:'circle',
-                    symbolSize:6,
-                    connectNulls:true
-                };
-                seriesArr.push(obj);
-            })
-
-            return seriesArr;
-        }
-
-    });
-
-    </script>
-
-  </body>
 </html>
