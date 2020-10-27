@@ -589,7 +589,6 @@ button {
   width: 52px;
   height: 20px;
   border: none;
-  background-image: url(img/btn_search_blue.gif);
   background-repeat: no-repeat;
   font-size: 0;
   vertical-align: middle;
@@ -890,7 +889,6 @@ button {
   margin-right: 2px;
   width: 20px;
   height: 20px;
-  background: url(../images/fullScreenPng.gif) 0px 0px no-repeat;
   overflow: hidden;
 }
 .stock .stockzw_content .main-right .chartWrapper .cateday,
@@ -1055,7 +1053,6 @@ button {
   height: 140px;
   position: relative;
   margin: 0 auto;
-  background: url(../images/reportDetail_img.png) no-repeat;
 }
 .stock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivLeft_right .text,
 .zwstock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivLeft_right .text {
@@ -1071,12 +1068,10 @@ button {
   top: -5px;
   left: 45px;
   z-index: 10;
-  background: url(../images/PingJiXian.png);
   background-position: 352px -1px;
 }
 .stock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivLeft_right .top .jian,
 .zwstock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivLeft_right .top .jian {
-  background: url(../images/Jian_Top_Left.png);
   background-repeat: no-repeat;
   width: 13px;
   height: 19px;
@@ -1090,7 +1085,6 @@ button {
   position: absolute;
   left: 45px;
   z-index: 10;
-  background: url(../images/PingJiXian.png);
   background-position: 351px 1px;
   text-align: left;
   height: 20px;
@@ -1098,7 +1092,6 @@ button {
 }
 .stock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivLeft_right .bottom .jian,
 .zwstock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivLeft_right .bottom .jian {
-  background: url(../images/Jian_Bottom_Left.png);
   background-repeat: no-repeat;
   width: 13px;
   height: 19px;
@@ -1110,7 +1103,6 @@ button {
   height: 155px;
   width: 300px;
   margin: 0 auto;
-  background: url(../images/reportDetail_img.png) 14px center no-repeat;
   position: relative;
 }
 .stock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivRight_right .text,
@@ -1128,12 +1120,10 @@ button {
   top: 12px;
   left: 36px;
   z-index: 10;
-  background: url(../images/PingJiXian.png);
   background-position: 292px -1px;
 }
 .stock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivRight_right .top .jian,
 .zwstock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivRight_right .top .jian {
-  background: url(../images/Jian_Top_Right.png);
   background-repeat: no-repeat;
   width: 13px;
   height: 19px;
@@ -1148,7 +1138,6 @@ button {
   position: absolute;
   left: 36px;
   z-index: 10;
-  background: url(../images/PingJiXian.png);
   background-position: 292px 1px;
   text-align: left;
   height: 20px;
@@ -1156,7 +1145,6 @@ button {
 }
 .stock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivRight_right .bottom .jian,
 .zwstock .stockzw_content .main-right .ggzwCont .pj-chart .img-chart1 .PingJiDivRight_right .bottom .jian {
-  background: url(../images/Jian_Bottom_Right.png);
   background-repeat: no-repeat;
   width: 13px;
   height: 19px;
@@ -1532,7 +1520,6 @@ a {
 .left_mydata_block .icon_move {
   cursor: move;
   margin-left: 10px;
-  background: url(img/left_move.png) no-repeat 0 0;
   position: absolute;
   top: 10px;
 }
@@ -1540,16 +1527,13 @@ a {
   position: absolute;
   right: 30px;
   top: 10px;
-  background: url(img/left_new.png) no-repeat 0 0;
 }
 .left_mydata_block .icon_delete {
-  background: url(img/left_delete.png) no-repeat 0 0;
   position: absolute;
   right: 8px;
   top: 10px;
 }
 .left_mydata_block .icon_delete:hover {
-  background: url(img/left_delete_f.png) no-repeat 0 0;
   position: absolute;
   right: 8px;
   top: 10px;
@@ -1643,20 +1627,17 @@ a {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: url(img/left_more.png) no-repeat 0 0;
 }
 .left_arrow {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: url(img/left_arrow.png) no-repeat 0 0;
   margin-left: 10px;
 }
 .left_icon_new {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(img/left_new.png) no-repeat 0 0;
   /* margin-left: 10px; */
   right: 30px;
   position: absolute;
@@ -1666,7 +1647,6 @@ a {
   display: inline-block;
   width: 14px;
   height: 7px;
-  background: url(img/left_icon_hot.png) no-repeat 0 0;
   right: 30px;
   position: absolute;
   top: 16px;
@@ -1675,13 +1655,11 @@ a {
   display: inline-block;
   width: 14px;
   height: 7px;
-  background: url(img/left_icon_hot.png) no-repeat 0 0;
 }
 .left_star {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(img/left_star.png) no-repeat 0 0;
   right: 10px;
   position: absolute;
   top: 12px;
@@ -1690,7 +1668,6 @@ a {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url(img/left_star_f.png) no-repeat 0 0;
   right: 10px;
   position: absolute;
   top: 12px;
@@ -1704,127 +1681,99 @@ a {
   position: relative;
 }
 .icon_home {
-  background-image: url(img/leftsprites.png);
   background-position: -102px -34px;
 }
 .icon_home_f {
-  background-image: url(img/leftsprites.png);
   background-position: -102px -68px;
 }
 .icon_top_mydata {
-  background-image: url(img/leftsprites.png);
   background-position: -136px -102px;
 }
 .icon_top_mydata_f {
-  background-image: url(img/leftsprites.png);
   background-position: 0px -136px;
 }
 /* 热门数据 */
 .icon_0 {
-  background-image: url(img/leftsprites.png);
   background-position: 0px -102px;
 }
 .icon_0_f {
-  background-image: url(img/leftsprites.png);
   background-position: -34px -102px;
 }
 /* 资金流向 */
 .icon_1 {
-  background-image: url(img/leftsprites.png);
   background-position: -136px -68px;
 }
 .icon_1_f {
-  background-image: url(img/leftsprites.png);
   background-position: -136px -34px;
 }
 /* 特色数据 */
 .icon_2 {
-  background-image: url(img/leftsprites.png);
   background-position: 0px -170px;
 }
 .icon_2_f {
-  background-image: url(img/leftsprites.png);
   background-position: -34px -170px;
 }
 /* 新股数据 */
 .icon_3 {
-  background-image: url(img/leftsprites.png);
   background-position: -68px -136px;
 }
 .icon_3_f {
-  background-image: url(img/leftsprites.png);
   background-position: -102px -136px;
 }
 /* 沪深港通 */
 .icon_4 {
-  background-image: url(img/leftsprites.png);
   background-position: -68px -102px;
 }
 .icon_4_f {
-  background-image: url(img/leftsprites.png);
   background-position: -102px -102px;
 }
 /* 公告大全 */
 .icon_5 {
-  background-image: url(img/leftsprites.png);
   background-position: -136px -136px;
 }
 .icon_5_f {
-  background-image: url(img/leftsprites.png);
   background-position: -170px 0px;
 }
 /* 研究报告 */
 .icon_6 {
-  background-image: url(img/leftsprites.png);
   background-position: -170px -34px;
 }
 .icon_6_f {
-  background-image: url(img/leftsprites.png);
   background-position: -170px -68px;
 }
 /* 年报季报 */
 .icon_7 {
-  background-image: url(img/leftsprites.png);
   background-position: 0px 0px;
 }
 .icon_7_f {
-  background-image: url(img/leftsprites.png);
   background-position: -204px 0px;
 }
 /* 期货期权 -- 股东*/
 .icon_8 {
-  background-image: url(img/leftsprites.png);
   background-position: -170px -102px;
 }
 .icon_8_f {
-  background-image: url(img/leftsprites.png);
   background-position: -170px -136px;
 }
 /* 经济数据 --期货 */
 .icon_9 {
-  background-image: url(img/leftsprites.png);
   background-position: -68px -68px;
 }
 .icon_9_f {
-  background-image: url(img/leftsprites.png);
   background-position: -102px 0px;
 }
 /* 基金数据  --经济数据*/
 .icon_10 {
-  background-image: url(img/leftsprites.png);
   background-position: -68px 0px;
 }
 .icon_10_f {
-  background-image: url(img/leftsprites.png);
   background-position: -68px -34px;
 }
 /* 基金 */
 .icon_11 {
-  background-image: url(img/leftsprites.png);
   background-position: 0px -68px;
 }
 .icon_11_f {
-  background-image: url(img/leftsprites.png);
   background-position: -34px -68px;
 }
 /* 特色数据 */
@@ -2205,7 +2154,6 @@ a {
   border-left: #bbd4e8 1px solid;
   width: 100%;
   margin-bottom: 0;
-  background: url(img/table_bg.png) repeat-y #fff;
   font-family: Arial;
   text-align: center;
 }
@@ -2558,7 +2506,6 @@ img {
   color: #FF0000;
 }
 .mainnav ul li .img {
-  background: url(img/nav_bg.png) no-repeat;
   height: 11px;
   width: 2px;
   display: inline-block;
@@ -2841,7 +2788,6 @@ img {
   width: 52px;
   height: 20px;
   border: none;
-  background-image: url(img/btn_search_blue.gif);
   background-repeat: no-repeat;
   font-size: 0;
   vertical-align: middle;
@@ -2935,7 +2881,6 @@ img {
   width: 52px;
   height: 20px;
   border: none;
-  background-image: url(img/btn_search_blue.gif);
   background-repeat: no-repeat;
   font-size: 0;
   vertical-align: middle;
@@ -3216,7 +3161,6 @@ img {
   width: 52px;
   height: 20px;
   border: none;
-  background-image: url(img/btn_search_blue.gif);
   background-repeat: no-repeat;
   font-size: 0;
   vertical-align: middle;
@@ -3394,7 +3338,6 @@ img {
   display: block;
   background-position: -35px -45px;
   z-index: 300;
-  background-image: url(./img/icon.png);
   float: left;
   overflow: hidden;
   width: 15px;
@@ -3632,7 +3575,6 @@ img {
   height: 20px;
   line-height: 20px;
   margin-top: 3px;
-  background: url(./img/background-cache.gif);
   background-repeat: repeat-x;
 }
 .cateday ul li a {
@@ -3640,7 +3582,6 @@ img {
 }
 .cateday ul li.at2 i,
 .cateday ul li.at i {
-  background: url(//data.eastmoney.com/images/element-cache.gif) no-repeat -65px -15px;
   overflow: hidden;
   width: 13px;
   height: 6px;
