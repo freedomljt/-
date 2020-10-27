@@ -6,6 +6,7 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="./cm-basic.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.7.0/echarts-en.min.js"></script>
+
   </head>
   <body>
     <div class="PO">
@@ -14,10 +15,15 @@
     </div>
 
     <script type="text/javascript">
+      const axios = require('axios');
+
     $(function(){
         var BK_URL = 'https://www.chinamoney.com.cn/ags/ms/'
 
         $.ajax({
+          proxy: {
+            host: 'https://www.chinamoney.com.cn',
+          },
             url:BK_URL+'cm-u-bk-currency/LprChrtCSV?startDate=2019-01-01',
             type:'post',
             cache: false,
